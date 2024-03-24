@@ -1,5 +1,6 @@
 :root{
-    --pink:#6e6b55;
+    --pink:#2272FF;
+    
 }
 *{
     margin: 0;padding: 0;
@@ -9,6 +10,7 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: 2s linear;
+    background-color: black;
 }
 html{
     font-size: 62.5%;
@@ -23,48 +25,46 @@ html{
     color: #D2D1CF;
     padding: 1rem;
     margin: 2rem 0;
-    background: rgba(125, 58, 91, 0.05);
+    background: rgba(0, 0, 0, 0.05);
 }
 .heading span{
     color: var(--pink);
 }
-.btn{
-    display: inline-block;
-    margin-top: 1rem;
-    border-radius: 5rem;
-    background: #333333;
-    color: #fff;
-    padding: .9rem 3.5rem;
-    cursor: pointer;
-    font-size: 1.7rem;
-}
-.btn:hover{
-    background: #0c20b3;
 
-}
 header{
     
     top: 0;left: 0; right: 0;
-    background: #a9a597;
-    padding: .05px 9%;
+    background: #000000;
+    
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content:space-between;
     z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(186, 132, 175, 0.1);
+    box-shadow: 0 .5rem 1rem rgba(190, 169, 226, 0.1);
 }
 header h3{
     font-size: 4rem;
+    padding-left: 60px;
+    color: #2272FF;
+    padding-top: 5px;
+    
+}
+.logo{
+    display:flex;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    
 }
 
 /* Apply styles to the logo */
 header img{
-   position: relative;/* Fixed position to keep it in place while scrolling */
-    top: 0; /* Position at the top */
+   /* Position at the top */
     left: 10px; /* Position at the left */
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    padding: 10px; /* Optional: Add padding for better spacing */
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Maintain aspect ratio */
+    padding: 0px;
+    margin-left: 30px; 
+    padding-left: 10px;/* Optional: Add padding for better spacing */
   
     /* Optional: Adjust z-index if needed */
   }
@@ -76,16 +76,13 @@ header #navbar{
     transition: top 0.3s;
 
 }
- 
-  
-
 header .navbar a{
     font-size: 2rem;
     padding:0 1.5rem;
-    color: #073069;
+    color: 2272FF;
 }
 header .navbar a:hover{
-    color: #1f1218;
+    color:white;
 }
 header .icons a{
     font-size: 1.5rem;
@@ -100,12 +97,13 @@ header #toggler{
 }
 header .fa-bars{
     font-size: 3rem;
-    color: #333;
+    color: #919ba0;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
     border: 1rem solid rgba(0, 0, 0, .3) ;
     display: none;
+    transition: 0.2s ease;
 }
 .carousel {
     position: relative;
@@ -154,7 +152,7 @@ header .fa-bars{
 
 .home .content h3{
     font-size: 6rem;
-    color: #11009E;
+    color: #2272FF;
     outline-color: #999;
 }
 .home .content span{
@@ -166,19 +164,21 @@ header .fa-bars{
 }
 .home .content p{
     font-size: 1.5rem;
-    color:#45494b;
+    color:#919ba0;
     padding: 1rem 0;
     line-height: 1.5;
 }
 .home .jac img {
     padding-top: 10px;
-    float: right;
+    position: relative;
     margin-left: 6rem;
     width: 40rem;
     height: auto;
+    animation: slidein-bottom 0.5s ease forwards;
+    
   }
 .about .heading{
-    color: #656464;
+    color: #919ba0;
 }
 .about .row{
     display: flex;
@@ -200,25 +200,30 @@ header .fa-bars{
 }
 .about .row .content h3{
     font-size: 2.5rem;
-    color: #333;
+    color: #919ba0;
 }
 .about .row .content p{
     font-size: 1.5rem;
-    color: #999;
+    color: #919ba0;
     padding: .5rem 0;
     padding-top: 1rem;
     line-height: 1.5 ;
-
+}
+.about .row img{
+    float: left;
+    height: 480px;
+    width: 420px;
 }
 .product p{
-    font-size: 30px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
+    text-align: center;
+    color: #2272FF;
 }
 
-
 .review .heading{
-    color: #656464;
+    color:#919ba0;
 }
 .review .box-container{
     display: flex;
@@ -228,10 +233,12 @@ header .fa-bars{
 .review .box-container .box{
     flex:1 1 30rem;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    border-radius: .5rem;
+    border-radius: 5%;
     padding: 3rem 2rem ;
+    
     position: relative;
-    border: 1rem solid rgba(0, 0, 0, .1);
+    border: 2px solid #2272FF  transparent;
+    transition: white 0.3s ease;
 }
 .review .box-container .box .fa-quote-right{
     position: absolute;
@@ -244,7 +251,7 @@ header .fa-bars{
     font-size: 2rem;
 }
 .review .box-container .box p{
-    color:#999;
+    color:#919ba0;
     font-size: 1.5rem;
     line-height: 1.5rem ;
     padding-top: 2rem;
@@ -268,7 +275,7 @@ header .fa-bars{
 
 .review .box-container .box .user h3 {
     font-size: 2rem;
-    color: #333;
+    color: #2272FF;
     margin: 0; /* Remove default margins to prevent extra spacing */
     text-align: center;
 }
@@ -276,7 +283,7 @@ header .fa-bars{
 
 .review .box-container .box .user span{
     font-size: 1.5rem;
-    color: #999;
+    color: #919ba0;
     display: block;
     text-align: center;
     
@@ -290,7 +297,7 @@ header .fa-bars{
     padding-right: 10px;
 }
 .contact .heading{
-    color: #656464;
+    color: #919ba0;
 }
 .contact .row form{
     flex:1 1 40rem;
@@ -313,7 +320,7 @@ header .fa-bars{
     font-size: 1.7rem;
     color:#333;
     text-transform: none;
-    border: .1rem solid rgba(0, 0, 0, .1);
+    border: .1rem solid #919ba0;
     border-radius: .5rem;
     margin: .7rem 0;
     width: 100%;
@@ -334,13 +341,13 @@ header .fa-bars{
     flex:1 1 .25rem;
 }
 .footer .box-container .box h3{
-    color: #333;
+    color: #2272FF;
     font-size: 2.5rem;
     padding: 1rem 0;
 }
 .footer .box-container .box a{
     display: block;
-    color: #666;
+    color: #919ba0;
     font-size: 1.5rem;
     padding: 1rem 0;
 }
@@ -351,49 +358,43 @@ header .fa-bars{
 }
 
 
-.footer .credit{
-    text-align: center;
-    padding: 1.5rem;
-    margin-top:1.5rem ;
-    padding-top: 2.5rem;
-    font-size: 2rem;
-    color: #333;
-    border-top: .1rem solid rgba(0, 0, 0, .1);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slidein-bottom {
+    from {
+        transform: translateY(100%); /* Start off-screen bottom */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+    }
 }
-.footer .credit span{
-    color:#7e1059;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* media queries*/
@@ -457,3 +458,21 @@ header .fa-bars{
     }
    
     }
+    @media (max-width: 768px) {
+        .product img {
+            width: 100%; /* Set the width to 100% of the viewport */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
+    }
+    
+    @media (max-width: 768px) {
+        button{
+            display: none;
+        }
+        
+        .carousel-items img {
+            display:none;
+        }
+    }
+    
